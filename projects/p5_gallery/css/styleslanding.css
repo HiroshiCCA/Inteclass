@@ -1,0 +1,88 @@
+/* Alignment styles */
+
+body, html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+}
+
+/*=====================================*/
+@font-face {
+	font-family: 'Source';
+	src: url("../SourceCodePro-ExtraLight.ttf");
+}
+
+body {
+	/*background-color: SkyBlue;*/
+	margin: 0;
+	padding: 0;
+	font-family: Source, sans-serif;
+	font-size: 6em;
+	color: white;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	text-align: center;
+	/*vertical-align: center;*/
+}
+
+.containerlanding {
+	/*min-width: 1000px;*/
+	height: 920px;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.middle {
+	line-height: 0.5em;
+	color: black;
+	position: absolute;
+	/*background: black;*/
+	max-width: 100%;
+	min-width: 55%;
+	min-height: 20%;
+	/*margin: auto;*/
+	margin-top: 15%;
+	top: 0;
+	/*bottom: 0;*/
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.button {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 10px;
+	right: 10px;
+	border-radius: 50%;
+	background: red;
+	z-index: 3;
+	font-size: 1px;
+	line-height: 1px;
+	color: red;
+}
+
+.button:hover{
+	transform: width, height;
+	width: 30px;
+	height: 30px;
+	opacity: 0.6;
+
+}
+
+.button:active {
+
+}
+
+.l2 {
+	font-size: 0.3em;
+}
