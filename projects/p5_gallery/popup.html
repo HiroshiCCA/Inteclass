@@ -1,0 +1,104 @@
+<a rel="gallery" title="Lorem ipsum" class="fancybox" href="http://fancyapps.com/fancybox/demo/1_b.jpg"><img src="http://fancyapps.com/fancybox/demo/1_s.jpg" alt=""/></a>
+
+<a rel="gallery" title="Proin imperdiet augue et magna interdum hendrerit" class="fancybox" href="http://fancyapps.com/fancybox/demo/2_b.jpg"><img src="http://fancyapps.com/fancybox/demo/2_s.jpg" alt=""/></a>
+
+.fancybox-title-over-wrap {
+    width: 100%;
+    padding: 0;
+}
+
+.fancybox-title-over-wrap > div {
+    padding: 10px;
+}
+
+$(".fancybox").fancybox({
+    afterShow: function() {
+        $(".fancybox-title").wrapInner('<div />').show();
+        
+        $(".fancybox-wrap").hover(function() {
+            $(".fancybox-title").show();
+        }, function() {
+            $(".fancybox-title").hide();
+        });
+    },
+    helpers : {
+        title: {
+            type: 'over'
+        }
+    }
+});
+
+<!-- ================================================================ -->
+
+
+<a rel="gallery" title=""class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/L9szn1QQfas?enablejsapi=1&wmode=opaque">Video #1</a>
+
+.fancybox-nav {
+    width: 60px;       
+}
+
+.fancybox-nav span {
+    visibility: visible;
+}
+
+.fancybox-next {
+    right: -60px;
+}
+
+
+// Fires whenever a player has finished loading
+function onPlayerReady(event) {
+    event.target.playVideo();
+}
+
+// Fires when the player's state changes.
+function onPlayerStateChange(event) {
+    // Go to the next video after the current one is finished playing
+    if (event.data === 0) {
+        $.fancybox.next();
+    }
+}
+
+// The API will call this function when the page has finished downloading the JavaScript for the player API
+function onYouTubePlayerAPIReady() {
+    
+    // Initialise the fancyBox after the DOM is loaded
+    $(document).ready(function() {
+        $(".fancybox")
+            .attr('rel', 'gallery')
+            .fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                nextEffect  : 'none',
+                prevEffect  : 'none',
+                padding     : 0,
+                margin      : 50,
+                beforeShow  : function() {
+                    // Find the iframe ID
+                    var id = $.fancybox.inner.find('iframe').attr('id');
+                    
+                    // Create video player object and add event listeners
+                    var player = new YT.Player(id, {
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
+            });
+    });
+    
+<!-- ================================================================ -->
+<div>contentcontent
+    <a href = "javascript:void(0)" onclick = "document.getElementById('row1note1').style.display='block';document.getElementById('fade').style.display='block'"><div class="note1"></div></a>
+</div>
+
+
+<div id="light" class="white_content">
+	This is the lightbox content. <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+
+</div>
+
+<div id="fade" class="black_overlay"></div>
+
+<!-- =============================================================== -->

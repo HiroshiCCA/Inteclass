@@ -1,0 +1,262 @@
+@font-face {
+	font-family: 'Source';
+	src: url("../SourceCodePro-ExtraLight.ttf");
+}
+
+html, body {
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+body {
+	/*background-color: SkyBlue;*/
+	font-family: Source, sans-serif;
+	font-size: 3em;
+	color: white;
+}
+
+.wrapper {
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+.header {
+	position: absolute;
+	top: 4vh;
+	left: 0;
+	text-align: center;
+	width: 100vw;
+	height: 15vh;
+	color: Black;
+}
+
+.container {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+}
+
+.con1 {
+	width: 99vw;
+	height: 100vh;	
+}
+
+.con2 {
+	width: 99vw;
+	height: 25vh;
+	top: -13vh;
+}
+
+.row {
+	position: absolute;
+	border: 1px solid black;
+	margin: auto;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.ro1 {
+	height: 25vh;
+	width: 80vw;	
+}
+
+.ro2 {
+	height: 25vh;
+	width: 80vw;
+}
+
+.block {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.line {
+	border-bottom: 1px solid black;
+	height: 25%;
+	top: 1px;
+}
+
+.symbolrthym {
+	/*background-color: Crimson;*/
+	width: 6vw;
+	height: 25vh;
+	float:left;
+    z-index: 10;
+}
+
+.clefbass {
+	background-image: url('../images/clefbass.png');
+	background-repeat: no-repeat;
+	background-origin: center; 
+    background-size: contain;
+    width: 125%;
+    height: 125%;
+    margin-top: -20%;
+    z-index: 10;
+}
+
+.clefbass:hover {
+	box-shadow: 3px 3px 3px Gray;
+}
+
+/*notes ============================*/
+
+.notes {
+	position: absolute;
+ 	/*left: 16;*/
+	min-width: 50%;
+	max-width: 100%;
+	height: 100%;
+    z-index: 4;
+}
+
+#nbl1 {
+	margin-left: 12%;
+	width: 56%;
+    z-index: 5;
+}
+
+#nbl2 {
+	clear: both;
+	position: absolute;
+	left: 50%;
+	padding-left: 6%;
+	min-width: 50%;
+}
+
+#nbla1 {
+	padding-left: 5%;
+}
+
+#nbla2 {
+	clear: both;
+	position: absolute;
+	left: 50%;
+	padding-left: 5%;
+	min-width: 50%;
+}
+
+
+.symbol {
+	/*background-color: Crimson;*/
+	width: 3.5vw;
+	height: 25vh;
+	float:left;
+	margin-left: 2.8vw;
+}
+
+.notedownstrike {
+	background-image: url('../images/notedownstrike.png');
+	background-repeat: no-repeat;
+	background-origin: center; 
+    background-size: contain;
+    height: 102%;
+    width: 10%;
+	position: absolute;
+	bottom: -9vh;
+}
+
+.notedownstrike:hover {
+	box-shadow: 3px 3px 3px Gray
+}
+
+.notedownst {
+	background-image: url('../images/notedown.png');
+	background-repeat: no-repeat;
+	background-origin: center; 
+    background-size: contain;
+    height: 102%;
+    width: 10%;
+	position: absolute;
+}
+
+.notedownhalf {
+	background-image: url('../images/notedownhalf.png');
+	background-repeat: no-repeat;
+	background-origin: center; 
+    background-size: contain;
+    height: 102%;
+    width: 10%;
+	position: absolute;
+}
+
+.notedownst:hover {
+	box-shadow: 3px 3px 3px Gray
+}
+
+.notepause {
+	background-image: url('../images/notepause.png');
+	background-repeat: no-repeat;
+	background-origin: center; 
+    background-size: contain;
+    height: 100.5%;
+    width: 10%;
+	position: absolute;
+}
+
+.notepause:hover {
+	box-shadow: 3px 3px 3px Gray
+}
+
+.noteD {
+	bottom: -25%;
+}
+
+
+.noteE {
+	bottom: -12%;
+}
+
+.noteG {
+	bottom: 12%;
+}
+
+.red {
+	background-color:Crimson;
+}
+
+/*===================================*/
+
+.spacer {
+	position: absolute;
+	width: 5px;
+	height: 100%;
+	background: black;
+	margin: auto 50% auto 50%;
+    z-index: 3;
+}
+
+.spacer1 {
+	position: absolute;
+	width: 5px;
+	height: 100%;
+	background: black;
+	margin: auto 50% auto 50%;
+}
+
+
+/*====================================*/
+
+.fancybox-title-over-wrap {
+    width: 100%;
+    padding: 0;
+}
+
+.fancybox-title-over-wrap > div {
+    padding: 10px;
+}
+
+.fancybox-nav {
+    width: 60px;       
+}
+
+.fancybox-nav span {
+    visibility: visible;
+}
+
+.fancybox-next {
+    right: -60px;
+}
