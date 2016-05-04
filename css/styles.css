@@ -1,22 +1,78 @@
+@font-face {
+	font-family: 'Source';
+	src: url("../SourceCodePro-ExtraLight.ttf");
+}
+
+body {
+	background: Black;
+}
+
 p {
 	font-family: 'PT Sans', serif;
 }
 
 a {
 	text-decoration: none;
-	color: RoyalBlue;
+	color: Crimson;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: Green;
+	color: FF6666;
 }
 
 a:visited {
-	color: red;
+	color: Crimson;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.container {
+	color: gray;
+	font-family: 'PT Sans', serif;
+	position: relative;
+	width: 40vw;
+	margin: auto;
+	padding: 0;
+}
+
+.Header {
+	color: Peru;
+	text-align: center;
+	font-family: 'Source', sans-serif;
+}
+
+.header h1 {
+	font-size: 3em;
+	border-top: 2px solid;
+}
+
+.header h3 {
+	font-size: 3em;
 }
 
 #links {
-	margin: 5px;
-	padding: 40px;
+	position: relative;
+	top: 3px;
+	margin: 10px;
+	padding: 10px;
+	font-size: 1.5em;
+	color: Crimson;
+	border-top: 2px solid;
+}
+
+#links p {
+	clear: both;
+}
+
+.project {
+	color: Tan;
+}
+
+.localized {
+	margin-left: 3vw;
+	margin-bottom: 2vh;
+	float: left;
 }
