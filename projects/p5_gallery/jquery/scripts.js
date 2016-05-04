@@ -1,3 +1,4 @@
+window.onload = function() {
 // ========================================
 	// $(function() {
  //    	$( "#button" ).click(function() {
@@ -5,6 +6,36 @@
  //    	});
 	// });
 // ========================================
+
+
+jQuery(function($) {
+    $("#bgm").prop('volume', 0.2);
+
+    window.setVolume = function(bgm,vol) {
+        sounds[bgm].volume = 0.3;
+    }
+});
+
+
+// ========================================
+
+$("#nav-two a")
+  .each(function(i) {
+    if (i != 0) {
+      $("#beep-two")
+        .clone()
+        .attr("id", "beep-two" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beeper", i);
+  })
+  .mouseenter(function() {
+    $("#beep-two" + $(this).data("beeper"))[0].play();
+  });
+$("#beep-two").attr("id", "beep-two0");
+
+// ========================================
+
 $(".fancybox").fancybox({
     afterShow: function() {
         $(".fancybox-title").wrapInner('<div />').show();
@@ -64,4 +95,5 @@ function onYouTubePlayerAPIReady() {
                 }
             });
     });
-    
+
+}
